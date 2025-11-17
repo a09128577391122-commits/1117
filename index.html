@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 右上自我介紹卡片（內嵌 SVG 大頭照） -->
+    <div class="profile" role="contentinfo" aria-label="個人資料">
+      <!-- 內嵌 SVG：簡潔的男大學生卡通頭像 -->
+      <svg class="avatar" viewBox="0 0 120 120" role="img" aria-label="男大學生大頭照">
+        <defs>
+          <clipPath id="circleClip"><circle cx="60" cy="60" r="56"/></clipPath>
+        </defs>
+        <rect width="120" height="120" rx="18" ry="18" fill="#e9f4ff"/>
+        <g clip-path="url(#circleClip)" transform="translate(0,0)">
+          <!-- 背景圓 -->
+          <circle cx="60" cy="60" r="56" fill="#d9eefc"/>
+          <!-- 頭部 -->
+          <ellipse cx="60" cy="55" rx="30" ry="34" fill="#FFD9B3"/>
+          <!-- 髮型 -->
+          <path d="M34 45 Q46 20 60 36 Q74 20 86 44 Q84 36 78 34 Q70 28 60 30 Q50 28 42 34 Q36 38 34 45 Z" fill="#2f2f2f"/>
+          <!-- 眼睛 -->
+          <circle cx="50" cy="56" r="3" fill="#1b1b1b"/>
+          <circle cx="70" cy="56" r="3" fill="#1b1b1b"/>
+          <!-- 眼眉 -->
+          <path d="M45 50 Q50 48 55 50" stroke="#2f2f2f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M65 50 Q70 48 75 50" stroke="#2f2f2f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <!-- 鼻子 -->
+          <path d="M60 60 Q58 63 60 65" stroke="#d29974" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <!-- 嘴巴 -->
+          <path d="M53 72 Q60 76 67 72" stroke="#b85a4a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <!-- 上衣 -->
+          <rect x="30" y="84" width="60" height="22" rx="6" fill="#2b6ea3"/>
+          <path d="M60 84 L60 105" stroke="#1f496c" stroke-width="2" />
+        </g>
+        <!-- 外框圓 -->
+        <circle cx="60" cy="60" r="56" fill="none" stroke="#cfe9ff" stroke-width="2"/>
+      </svg>
+
+      <div class="profile-text">
+        <div class="id">412730615</div>
+        <div class="name">周O助</div>
+      </div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
